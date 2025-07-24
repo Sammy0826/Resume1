@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Resume</title>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Playfair+Display&family=Lora&display=swap" rel="stylesheet">
+
+
+  <style>
+    body {
+       
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #fce1e4, #d0e8f2, #d0f0c0);
+    }
+
+    .container {
+      display: flex;
+      max-width: 1000px;
+      margin: 30px auto;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+    }
+
+   
+    .sidebar {
+      background-color: #fce1e4; 
+      color: #4a4a4a;
+      padding: 30px 20px;
+      width: 35%;
+      text-align: center;
+    }
+
+    .sidebar img {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 20px;
+      border: 4px solid white;
+    }
+
+    .sidebar h2 {
+      font-size: 20px;
+      margin-bottom: 5px;
+    }
+
+    .sidebar .title {
+      font-size: 14px;
+      margin-bottom: 20px;
+      font-weight: lighter;
+    }
+
+    .sidebar h3 {
+      margin-top: 20px;
+      font-size: 16px;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 5px;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      text-align: left;
+      padding-left: 10px;
+      margin-top: 10px;
+    }
+
+    .sidebar ul li {
+      margin: 6px 0;
+      font-family: 'Lora', serif;
+      font-size: 16px;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .photo-style {
+      width: 250px;
+      height: auto;
+      border-radius: 12px; /* Slightly rounded, elegant */
+      border: 3px solid #fce1ff; /* Soft pink-lavender border */
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12); /* Soft drop shadow */
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .photo-style:hover {
+      transform: scale(1.05);
+      box-shadow: 0 12px 28px rgba(215, 170, 255, 0.4); /* Glow on hover */
+    }
+
+
+    h1 {
+      font-family: 'Dancing Script', cursive;
+      font-size: 36px;
+      color: #b76e79;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+      color: #4b4453;
+    }
+
+    p {
+      font-family: 'Lora', serif;
+      font-size: 16px;
+      color: #333;
+      line-height: 1.6;
+    }
+ 
+    a {
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .email {
+      color: #884ea0;
+       font-weight: bold;
+      font-style: italic;
+    }
+
+    .email:hover {
+      background-color: #f5eef8;
+      color: #884ea0;
+      padding: 2px 6px;
+      border-radius: 6px;
+     
+    }
+
+    .facebook {
+      color: #884ea0;
+      font-weight: bold;
+      font-style: italic;
+    }
+
+    .facebook:hover {
+      background-color: #f5eef8;
+      color: #884ea0;
+      padding: 2px 6px;
+      border-radius: 6px;
+    }
+
+    .IG {
+      color: #884ea0;
+      font-style: italic;
+      font-weight: bold;
+    }
+
+    .IG:hover {
+      background-color: #f5eef8;
+      color: #884ea0;
+      padding: 2px 6px;
+      border-radius: 6px;
+    }
+
+   
+    .main {
+      background-color: #fff;
+      padding: 30px;
+      width: 65%;
+    }
+
+    .main h2 {
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .main section {
+      margin-bottom: 25px;
+    }
+
+    .main ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    .main li {
+      margin-bottom: 10px;
+      font-family: 'Lora', serif;
+      font-size: 16px;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .location {
+      color: #884ea0;
+      font-weight: bold;
+       font-weight: bold;
+      font-style: italic;
+    }
+
+    .location:hover {
+      background-color: #f5eef8;
+      color: #884ea0;
+      padding: 2px 6px;
+      border-radius: 6px;
+     
+    }
+   
+    .gif-box {
+      width: 240px;
+      height: auto;
+      border: 2px solid #cbaacb; 
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      margin-top: 20px;
+      transition: transform 0.3s ease;
+    }
+
+    .gif-box:hover {
+      transform: scale(1.05);
+    }
+
+   .gif-button-container {
+      display: flex;
+      align-items: center;
+      gap: 20px; 
+      margin-top: 20px;
+    }
+
+    .gif-style {
+      width: 250px;
+      height: auto;
+      border: 3px solid #e6d8ff;        
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); 
+      border-radius: 8px;     
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .gif-style:hover {
+      transform: scale(1.03);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25); 
+    }
+
+
+    .fancy-button {
+      padding: 12px 24px;
+      background: linear-gradient(90deg, #c8e8ff, #e3d7ff);
+      color: #333;
+      text-decoration: none;
+      border-radius: 20px;
+      font-weight: bold;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: 0.3s;
+    }
+
+    .fancy-button:hover {
+      background: linear-gradient(90deg, #b2e4fa, #d9c6ff);
+      transform: scale(1.05);
+    }
+
+
+
+
+
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <img src="image/pic.jpg" alt="Profile Picture" class="photo-style">
+      <h2>Samantha M. Capunpun</h2>
+      <p class="title">GRAPHIC DESIGNER</p>
+
+      <h3>CONTACT INFO</h3>
+      <ul>
+        <li>📞: <a href="tel:+63 994 936 9033" class="email" target="_blank">+63 994 936 9033</a></li>
+        <li>📧: <a href="mailto:capunpunsamantha@gmail.com" class="email" target="_blank">capunpunsamantha@gmail.com</a></li>
+        <li>📍: <a href="https://www.google.com/maps/place/Cristo+Rey,+Capas,+Tarlac" class="location" target="_blank">Cristo Rey, Capas, Tarlac</a></li>
+        <li>📘: <a href="https://www.facebook.com/samantha.mallari.capunpun/" class="facebook" target="_blank">fb: Samantha Mallari Capunpun</a></li>
+        <li>📸: <a href="https://www.instagram.com/creamsstickk/" class="IG" target="_blank">IG: @creamsstickk</a></li>
+      </ul>
+
+      <h3>HOBBIES</h3>
+      <ul>
+        <li>Editing Pictures</li>
+        <li>Playing Offline Games</li>
+        <li>Reading Manhwa/Manhua/Manga</li>
+        <li>Watching Animes</li>
+      </ul>
+      <img src="https://media1.tenor.com/m/xDCr6DNYcZEAAAAC/sealyx-frieren-beyond-journey%27s-end.gif" alt="Frieren gif" class="gif-box">
+
+
+    </div>
+
+    <div class="main">
+      <section class="about">
+        <h2>About Me</h2>
+        <p>
+            I am Samantha Capunpun you all can call me Sam or Sammy. I’m an IT student with a growing passion for graphic design, currently exploring tools like Canva and Figma to turn creative ideas into visual content.
+        </p>
+          
+      </section>
+
+      <hr>
+
+      <section class="education">
+        <h2>Education</h2>
+        <ul>
+          <li><strong>Elementary:</strong> Cristo Rey East Elementary School</li>
+          <li><strong>High School:</strong> Cristo Rey High School</li>
+          <li><strong>Senior High:</strong> Cristo Rey Senior High School</li>
+          <li><strong>College:</strong> Dominican College of Tarlac</li>
+        </ul>
+      </section>
+
+      <hr>
+
+      <section class="skills">
+        <h2>Skills</h2>
+        <p>• Photoshop • Canva • Layout Design • Figma • UI/UX Design •</p>
+
+        <hr>
+
+      <section class="project and experience"></section>
+    
+        <h2>Project and Experience</h2>
+        <p>My Project so far is our SAD project and for the experience is a just a basic coding about HTML, CSS, python etc.</p>
+      </section>
+      <div class="gif-button-container">
+          <img src="https://media1.tenor.com/m/kW35xmVznvQAAAAd/wind-breaker-windbreaker.gif" alt="Wind Breaker gif" class="gif-style">
+          <a href="your-resume.pdf" download class="fancy-button"  alt="Wind Breaker gif" class="gif-style">Download Resume </a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
